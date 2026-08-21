@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "threshold": 0.3,
+  "description_concepts": [
+    "evidence",
+    "handoff",
+    "process"
+  ],
+  "missing_description_concepts": [],
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "false_positive": 0,
+    "false_negative": 0,
+    "pass_rate": 1.0
+  },
+  "failures": [],
+  "results": {
+    "should_trigger": [
+      {
+        "prompt": "检查员工摸排、证据核验和负责人决策之间的业务交接",
+        "family": "process",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.667,
+        "matched_concepts": [
+          "evidence",
+          "handoff"
+        ],
+        "negative_pattern": null
+      }
+    ],
+    "should_not_trigger": [
+      {
+        "prompt": "只写前端页面",
+        "family": "frontend",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": "写前端"
+      }
+    ],
+    "near_neighbor": [
+      {
+        "prompt": "只分析一张截图的颜色",
+        "family": "visual",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": null
+      }
+    ]
+  }
+}
