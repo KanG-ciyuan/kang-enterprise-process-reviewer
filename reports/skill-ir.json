@@ -1,0 +1,72 @@
+{
+  "schema_version": "2.0.0-kang-lite",
+  "generated_at": "2026-08-21",
+  "package": {
+    "name": "kang-enterprise-process-reviewer",
+    "version": "0.1.1",
+    "owner": "Kang",
+    "maturity_tier": "production",
+    "lifecycle_stage": null,
+    "maintenance": {}
+  },
+  "intent": {
+    "description": "Review whether the enterprise AI process diagnosis product reflects a credible business workflow, role handoff, evidence boundary, and human decision gate. Use before product redesign or implementation. Do not use for frontend coding.",
+    "job_to_be_done": "Review whether the enterprise AI process diagnosis product reflects a credible business workflow, role handoff, evidence boundary, and human decision gate. Use before product redesign or implementation. Do not use for frontend coding.",
+    "target_users": [
+      "Kang operator"
+    ],
+    "inputs": [],
+    "outputs": [],
+    "exclusions": [],
+    "kang_defaults": {}
+  },
+  "triggers": {
+    "should_trigger": [
+      "检查员工摸排、证据核验和负责人决策之间的业务交接"
+    ],
+    "should_not_trigger": [
+      "只写前端页面"
+    ],
+    "near_neighbor": [
+      "只分析一张截图的颜色"
+    ]
+  },
+  "workflow": {
+    "router_rules": [],
+    "compact_workflow": [],
+    "gate_ladder": [],
+    "output_contract": []
+  },
+  "resources": {
+    "references": [],
+    "scripts": [],
+    "evals": [
+      "evals/trigger_cases.json"
+    ],
+    "reports": [
+      "reports/creation-handoff.md",
+      "reports/prior-art-research.md"
+    ]
+  },
+  "portability": {
+    "canonical_format": null,
+    "adapter_targets": [
+      "openai",
+      "claude",
+      "generic",
+      "agent-skills-compatible"
+    ],
+    "activation": {},
+    "execution": {},
+    "trust": {},
+    "permissions": {},
+    "degradation": {}
+  },
+  "gates": {},
+  "evidence_boundary": {
+    "generated_reports_are_evidence": true,
+    "planned_work_is_evidence": false,
+    "missing_external_or_human_evidence_label": "missing evidence",
+    "public_claim_policy": "claim only what local validation, install proof, human review, or provider-backed evidence actually supports"
+  }
+}

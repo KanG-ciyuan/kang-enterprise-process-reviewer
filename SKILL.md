@@ -3,7 +3,7 @@ name: kang-enterprise-process-reviewer
 description: Review whether the enterprise AI process diagnosis product reflects a credible business workflow, role handoff, evidence boundary, and human decision gate. Use before product redesign or implementation. Do not use for frontend coding.
 metadata:
   author: Kang
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Kang Enterprise Process Review Agent
