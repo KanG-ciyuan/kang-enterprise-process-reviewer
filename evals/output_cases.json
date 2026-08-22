@@ -1,0 +1,16 @@
+{
+  "cases": [
+    {
+      "id": "approval-exception-contract",
+      "prompt": "使用 $kang-enterprise-process-reviewer 审查采购审批流程。",
+      "input_files": [],
+      "assertions": [
+        "Every critical node contains actor, trigger, input, rule, output, receiver, failure, and escalation",
+        "Output covers withdrawal, rejection, timeout, delegate approval, unauthorized access, and supplemental evidence",
+        "Deterministic rules, bounded model work, and human judgment are separated",
+        "No diagnosis-specific interview workflow is injected"
+      ],
+      "human_notes": "Check whether the workflow is operationally credible without undocumented heroics."
+    }
+  ]
+}
