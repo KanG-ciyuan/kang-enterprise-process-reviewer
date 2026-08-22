@@ -30,10 +30,6 @@ If the objective or process boundary is absent, stop. If some evidence is absent
 
 Each critical node must identify its actor, trigger, input, rule, action, output, receiver, evidence, authorization, failure, recovery, timeout, escalation, and audit record.
 
-## Node contract
-
-Each critical node must identify its actor, trigger, input, rule, action, output, receiver, evidence, authorization, failure, recovery, timeout, escalation, and audit record.
-
 ## Output contract
 
 Return: scope and evidence register; actor responsibility map; node table; rule/Agent/human decision split; authorization and data controls; exception and escalation paths; contradictions; minimal viable workflow; findings; open decisions; downstream handoff.
