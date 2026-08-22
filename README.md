@@ -2,18 +2,18 @@
 
 [![status](https://img.shields.io/badge/status-public%20release-2ea44f)](https://github.com/KanG-ciyuan/kang-enterprise-process-reviewer/releases)
 [![version](https://img.shields.io/github/v/release/KanG-ciyuan/kang-enterprise-process-reviewer?label=version)](https://github.com/KanG-ciyuan/kang-enterprise-process-reviewer/releases)
-[![tests](https://img.shields.io/badge/local%20tests-1%20passed-2ea44f)](tests/)
+[![tests](https://img.shields.io/badge/contract%20tests-3-2ea44f)](tests/)
 [![license](https://img.shields.io/badge/license-MIT-6f42c1)](LICENSE)
 
-Kang 的企业流程审查 Skill。用于检查角色责任、证据边界、交接条件、失败路径和人工决策门，区别于产品内置的员工摸排 Skill。
+Kang 的通用业务流程审查数字员工 Skill。适用于 SaaS、内部工具、服务运营和 AI 辅助流程，检查责任、证据、交接、异常、授权和人工决策门。
 
 调用：`$kang-enterprise-process-reviewer`
 
-输入：已批准的架构交接、业务背景、流程材料和当前产品。输出：可追溯的流程审查与最小首发流程。它不替员工 Agent 访谈，不写前端。
+输入：流程目标、范围、角色、触发条件、约束和可用证据。输出：节点合同、规则/Agent/人工边界、异常路径、证据门和最小可行流程。它不写前端，不把访谈或模型输出冒充业务事实。
 
 ## 你可以直接这样说
 
-“使用 `$kang-enterprise-process-reviewer` 检查员工提交到负责人决策的流程交接和证据门。”
+“使用 `$kang-enterprise-process-reviewer` 检查采购审批的责任、证据、驳回、超时和升级路径。”
 
 ## 安装与验证
 
@@ -25,13 +25,13 @@ python3 ~/.codex/skills/kang-meta-skill/scripts/validate_skill.py ~/.codex/skill
 
 ## 前置条件
 
-- [ ] 已准备架构交接、业务背景和流程证据
+- [ ] 已准备流程目标、范围、角色、约束和可用证据
 - [ ] 已确认本轮只读
 - [ ] 已确认业务结论仍需人工确认
 
 ## Troubleshooting
 
-如果输入材料不足，标记 `to_verify` 并停止推进，不要把预置演示数据当成真实流程。
+如果材料不足，执行有限审查并标记 `to_verify`；如果授权、敏感数据或关键决策人不明确则停止推进，不把预置数据当成真实流程。
 
 ## License
 

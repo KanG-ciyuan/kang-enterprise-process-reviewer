@@ -1,1 +1,28 @@
-{"recommended_threshold":0.3,"description_required_concepts":["process","evidence","handoff"],"positive_concepts":{"process":["process","流程","workflow"],"evidence":["evidence","证据"],"handoff":["handoff","交接"]},"negative_patterns":["写前端","翻译"],"should_trigger":[{"text":"检查员工摸排、证据核验和负责人决策之间的业务交接","family":"process"}],"should_not_trigger":[{"text":"只写前端页面","family":"frontend"}],"near_neighbor":[{"text":"只分析一张截图的颜色","family":"visual"}]}
+{
+  "recommended_threshold": 0.3,
+  "description_required_concepts": ["workflow", "evidence", "handoff"],
+  "positive_concepts": {
+    "workflow": ["workflow", "process", "流程", "节点"],
+    "evidence": ["evidence", "证据", "依据", "佐证"],
+    "handoff": ["handoff", "交接", "receiver", "接收人"],
+    "failure": ["failure", "失败", "异常", "升级"]
+  },
+  "negative_patterns": ["写前端", "改颜色", "修复数据库", "翻译", "验收整个流程"],
+  "should_trigger": [
+    {"text": "核对 CRM 销售到财务回款之间的证据、交接和异常升级", "family": "crm"},
+    {"text": "审查采购申请、主管、财务、法务的业务流程、触发条件、证据、驳回和超时", "family": "approval"},
+    {"text": "检查游戏活动配置到审核发布和回滚的运营业务流程和证据", "family": "game-ops"},
+    {"text": "审查内容业务流程中选题、撰稿、事实核查、法务和发布的责任交接与证据", "family": "content"},
+    {"text": "梳理客服工单业务流程的升级、转派、超时和关闭节点与证据", "family": "internal-tool"}
+  ],
+  "should_not_trigger": [
+    {"text": "实现活动配置接口并修复数据库查询", "family": "implementation"},
+    {"text": "只调整审批页的颜色和圆角", "family": "visual"},
+    {"text": "采访一名员工并原样整理逐字稿", "family": "interview"}
+  ],
+  "near_neighbor": [
+    {"text": "重新定义管理员、组长和经办人的菜单权限", "family": "product-architect"},
+    {"text": "销售工作台筛选器太难用，请审查信息层级", "family": "ux-auditor"},
+    {"text": "版本完成后从干净入口验收整个流程", "family": "acceptance-auditor"}
+  ]
+}

@@ -1,6 +1,6 @@
 interface:
   display_name: Kang Enterprise Process Reviewer
-  short_description: 审查企业流程、证据门和角色交接
-  default_prompt: 使用 $kang-enterprise-process-reviewer 审查业务流程和人工决策门。
+  short_description: 审查流程节点、证据、异常和人工决策门
+  default_prompt: 使用 $kang-enterprise-process-reviewer 只读审查业务流程，按节点合同和证据门输出版本化流程交接。
 compatibility:
   adapter_targets: [openai, claude, generic, agent-skills-compatible]
